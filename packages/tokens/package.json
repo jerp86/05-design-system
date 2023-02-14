@@ -5,9 +5,11 @@
   "author": "Jose Eduardo Rodrigues Pinto <jerp.dev@gmail.com> (https://github.com/jerp86)",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
   },
   "devDependencies": {
+    "tsup": "^6.6.3",
     "typescript": "^4.9.5"
   }
 }
