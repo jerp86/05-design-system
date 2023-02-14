@@ -1,5 +1,7 @@
 {
   "private": true,
+  "author": "Jose Eduardo Rodrigues Pinto <jerp.dev@gmail.com> (https://github.com/jerp86)",
+  "license": "MIT",
   "workspaces": [
     "packages/*"
   ]
