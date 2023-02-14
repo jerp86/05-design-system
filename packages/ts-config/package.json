@@ -1,0 +1,7 @@
+{
+  "name": "@jerp-ignite-ui/ts-config",
+  "version": "1.0.0",
+  "author": "Jose Eduardo Rodrigues Pinto <jerp.dev@gmail.com> (https://github.com/jerp86)",
+  "license": "MIT",
+  "private": true
+}
