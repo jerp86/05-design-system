@@ -1,0 +1,13 @@
+{
+  "name": "@jerp-ignite-ui/tokens",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jose Eduardo Rodrigues Pinto <jerp.dev@gmail.com> (https://github.com/jerp86)",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
