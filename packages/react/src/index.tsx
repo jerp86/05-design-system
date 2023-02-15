@@ -1,5 +1,10 @@
-import { colors } from '@jerp-ignite-ui/tokens'
+import { styled } from './styles'
 
-export const App = () => (
-  <h1 style={{ color: colors.ignite300 }}>Hello World</h1>
-)
+const Button = styled('button', {
+  fontFamily: '$default',
+  backgroundColor: '$ignite500',
+  borderRadius: '$md',
+  padding: '$4',
+})
+
+export const App = () => <Button>Hello World</Button>
