@@ -28,3 +28,13 @@
 .tokens-grid tbody tr:nth-child(even) td {
   background: #444;
 }
+
+.colors-grid {
+  padding: 1.25rem 2rem;
+}
+
+.colors-grid > p {
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+}
