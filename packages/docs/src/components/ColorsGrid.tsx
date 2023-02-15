@@ -2,14 +2,14 @@ import { colors } from '@jerp-ignite-ui/tokens'
 import { getContrast } from 'polished'
 
 export const ColorsGrid = () => {
+  const getColorContrast = (color: string) =>
+    getContrast(color, '#FFF') < 3.5 ? '#000' : '#FFF'
+
   return Object.entries(colors).map(([key, color]) => (
-    <div key={key} style={{ backgroundColor: color, padding: '2rem' }}>
+    <div key={key} style={{ backgroundColor: color }} className="colors-grid">
       <p
         style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          fontFamily: 'monospace',
-          color: getContrast(color, '#FFF') < 3.5 ? '#000' : '#FFF',
+          color: getColorContrast(color),
         }}
       >
         <strong>{key}</strong>
