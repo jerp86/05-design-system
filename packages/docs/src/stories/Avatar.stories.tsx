@@ -8,6 +8,13 @@ export default {
     src: 'https://github.com/jerp86.png',
     alt: 'Photo of white male, short, black hair, wearing black t-shirt, focused on face',
   },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
