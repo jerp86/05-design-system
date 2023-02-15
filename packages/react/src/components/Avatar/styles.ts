@@ -12,6 +12,7 @@ export const AvatarContainer = styled(Avatar.Root, {
 export const AvatarImage = styled(Avatar.Image, {
   width: '100%',
   height: '100%',
+  aspectRatio: 1,
   objectFit: 'cover',
   borderRadius: 'inherit',
 })
