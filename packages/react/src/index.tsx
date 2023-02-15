@@ -31,3 +31,4 @@ export const Button = styled('button', {
 export type ButtonProps = ComponentProps<typeof Button>
 
 export * from './components/Box'
+export * from './components/Text'
