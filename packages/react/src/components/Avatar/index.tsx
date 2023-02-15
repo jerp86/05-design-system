@@ -13,3 +13,5 @@ export const Avatar = (props: AvatarProps) => (
     </AvatarFallback>
   </AvatarContainer>
 )
+
+Avatar.displayName = 'Avatar'
