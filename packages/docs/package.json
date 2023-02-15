@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "start-storybook -p 6006",
-    "build": "build-storybook"
+    "build": "build-storybook",
+    "lint": "eslint src/**/*.ts* --fix"
   },
   "author": "Jose Eduardo Rodrigues Pinto <jerp.dev@gmail.com> (https://github.com/jerp86)",
   "license": "MIT",
@@ -24,8 +25,10 @@
   },
   "dependencies": {
     "@jerp-ignite-ui/eslint-config": "*",
-    "@jerp-ignite-ui/tokens": "*",
     "@jerp-ignite-ui/react": "*",
+    "@jerp-ignite-ui/tokens": "*",
+    "@jerp-ignite-ui/ts-config": "*",
+    "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
