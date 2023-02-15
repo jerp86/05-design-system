@@ -30,6 +30,7 @@ export const Button = styled('button', {
 
 export type ButtonProps = ComponentProps<typeof Button>
 
+export * from './components/Avatar'
 export * from './components/Box'
 export * from './components/Heading'
 export * from './components/Text'
