@@ -7,8 +7,8 @@
   "author": "Jose Eduardo Rodrigues Pinto <jerp.dev@gmail.com> (https://github.com/jerp86)",
   "license": "MIT",
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch --external react",
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch --external react",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "devDependencies": {
