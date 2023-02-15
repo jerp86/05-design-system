@@ -7,14 +7,17 @@
   "author": "Jose Eduardo Rodrigues Pinto <jerp.dev@gmail.com> (https://github.com/jerp86)",
   "license": "MIT",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --watch --external react",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "devDependencies": {
     "@jerp-ignite-ui/eslint-config": "*",
     "@jerp-ignite-ui/tokens": "*",
     "@jerp-ignite-ui/ts-config": "*",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.10",
+    "react": "^18.2.0",
     "tsup": "^6.6.3",
     "typescript": "^4.9.5"
   }
