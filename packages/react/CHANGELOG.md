@@ -1,5 +1,11 @@
 # @jerp-ignite-ui/react
 
+## 2.0.1
+
+### Patch Changes
+
+- Fix TextInputProps to accept size prop in container
+
 ## 2.0.0
 
 ### Major Changes

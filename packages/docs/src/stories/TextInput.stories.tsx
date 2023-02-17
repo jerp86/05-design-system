@@ -1,10 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Box, Text, TextInput, TextInputProps } from '@jerp-ignite-ui/react'
+import {
+  Box,
+  Button,
+  Text,
+  TextInput,
+  TextInputProps,
+} from '@jerp-ignite-ui/react'
+import { ArrowRight } from 'phosphor-react'
 
 export default {
   title: 'Form/Text Input',
   component: TextInput,
-  args: {},
   decorators: [
     (Story) => {
       return (
@@ -18,6 +24,14 @@ export default {
       )
     },
   ],
+  argTypes: {
+    size: {
+      options: ['sm', 'md'],
+      control: {
+        type: 'inline-radio',
+      },
+    },
+  },
 } as Meta<TextInputProps>
 
 export const Primary: StoryObj<TextInputProps> = {
@@ -38,4 +52,34 @@ export const WithPrefix: StoryObj<TextInputProps> = {
     prefix: 'cal.com/',
     placeholder: 'your-username',
   },
+}
+
+export const WithPrefixAndSize: StoryObj<TextInputProps> = {
+  args: {
+    prefix: 'cal.com/',
+    placeholder: 'your-username',
+    size: 'sm',
+  },
+  decorators: [
+    (Story) => {
+      return (
+        <Box
+          as="form"
+          css={{
+            display: 'grid',
+            gridTemplateColumns: '1fr auto',
+            gap: '$2',
+            marginTop: '$4',
+            padding: '$4',
+          }}
+        >
+          {Story()}
+          <Button size="sm" type="submit">
+            Reservar
+            <ArrowRight />
+          </Button>
+        </Box>
+      )
+    },
+  ],
 }
