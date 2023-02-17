@@ -42,8 +42,8 @@ O Design System construído, pode ser avaliado e testado [clicando aqui](https:/
 - [X] Text
 - [X] TextInput
 - [X] Textarea
-- [ ] Toast
-- [ ] Tooltip
+- [X] Toast
+- [X] Tooltip
 
 ## :rocket: Tecnologias Utilizadas
 
