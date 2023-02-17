@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Avatar, AvatarProps } from '@jerp-ignite-ui/react'
+import { Avatar, AvatarProps, Box } from '@jerp-ignite-ui/react'
 
 export default {
   title: 'Data display/Avatar',
@@ -15,6 +15,7 @@ export default {
       },
     },
   },
+  decorators: [(Story) => <Box css={{ width: 'fit-content' }}>{Story()}</Box>],
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
