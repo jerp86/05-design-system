@@ -1,5 +1,11 @@
 # @jerp-ignite-ui/react
 
+## 2.0.2
+
+### Patch Changes
+
+- Add validation from crypto
+
 ## 2.0.1
 
 ### Patch Changes

@@ -1,4 +1,5 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, useCallback } from 'react'
+import crypto from 'crypto'
 import { Label, MultiStepContainer, Step, Steps } from './styles'
 
 export interface MultiStepProps
@@ -7,18 +8,31 @@ export interface MultiStepProps
   currentStep?: number
 }
 
-export const MultiStep = ({ size, currentStep = 1 }: MultiStepProps) => (
-  <MultiStepContainer>
-    <Label>
-      Passo {currentStep} de {size}
-    </Label>
+export const MultiStep = ({ size, currentStep = 1 }: MultiStepProps) => {
+  const handleUUID = useCallback(() => {
+    if (
+      typeof window !== 'undefined' &&
+      typeof window?.crypto?.randomUUID === 'function'
+    ) {
+      return window.crypto.randomUUID()
+    }
 
-    <Steps css={{ '--steps-size': size }}>
-      {Array.from({ length: size }, (_, i) => i + 1).map((step) => (
-        <Step key={crypto.randomUUID()} active={currentStep >= step} />
-      ))}
-    </Steps>
-  </MultiStepContainer>
-)
+    return crypto.randomUUID()
+  }, [])
+
+  return (
+    <MultiStepContainer>
+      <Label>
+        Passo {currentStep} de {size}
+      </Label>
+
+      <Steps css={{ '--steps-size': size }}>
+        {Array.from({ length: size }, (_, i) => i + 1).map((step) => (
+          <Step key={handleUUID()} active={currentStep >= step} />
+        ))}
+      </Steps>
+    </MultiStepContainer>
+  )
+}
 
 MultiStep.displayName = 'MultiStep'
